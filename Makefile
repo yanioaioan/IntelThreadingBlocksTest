@@ -33,7 +33,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = InterThreadingBlocksTest1.0.0
-DISTDIR = /home/yioannidis/InterThreadingBlocksTest/.tmp/InterThreadingBlocksTest1.0.0
+DISTDIR = /home/yioannidis/QtStuff/Projects/InterThreadingBlocksTest/.tmp/InterThreadingBlocksTest1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-rpath,/opt/qt/5.5/gcc_64
 LIBS          = $(SUBLIBS) -L./tbb/lib/mic -ltbb 
@@ -82,7 +82,7 @@ first: all
 $(TARGET):  $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
-Makefile: InterThreadingBlocksTest.pro ../.qmake.cache /opt/qt/5.5/gcc_64/mkspecs/linux-g++/qmake.conf /opt/qt/5.5/gcc_64/mkspecs/features/spec_pre.prf \
+Makefile: InterThreadingBlocksTest.pro ../../../.qmake.cache /opt/qt/5.5/gcc_64/mkspecs/linux-g++/qmake.conf /opt/qt/5.5/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/qt/5.5/gcc_64/mkspecs/common/unix.conf \
 		/opt/qt/5.5/gcc_64/mkspecs/common/linux.conf \
 		/opt/qt/5.5/gcc_64/mkspecs/common/sanitize.conf \
@@ -197,7 +197,7 @@ Makefile: InterThreadingBlocksTest.pro ../.qmake.cache /opt/qt/5.5/gcc_64/mkspec
 		/opt/qt/5.5/gcc_64/mkspecs/features/qt_config.prf \
 		/opt/qt/5.5/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/opt/qt/5.5/gcc_64/mkspecs/features/spec_post.prf \
-		../.qmake.cache \
+		../../../.qmake.cache \
 		/opt/qt/5.5/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/opt/qt/5.5/gcc_64/mkspecs/features/default_pre.prf \
 		deployment.pri \
@@ -326,7 +326,7 @@ Makefile: InterThreadingBlocksTest.pro ../.qmake.cache /opt/qt/5.5/gcc_64/mkspec
 /opt/qt/5.5/gcc_64/mkspecs/features/qt_config.prf:
 /opt/qt/5.5/gcc_64/mkspecs/linux-g++/qmake.conf:
 /opt/qt/5.5/gcc_64/mkspecs/features/spec_post.prf:
-../.qmake.cache:
+../../../.qmake.cache:
 /opt/qt/5.5/gcc_64/mkspecs/features/exclusive_builds.prf:
 /opt/qt/5.5/gcc_64/mkspecs/features/default_pre.prf:
 deployment.pri:

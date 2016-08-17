@@ -1,8 +1,9 @@
 #include <chrono>
 #include <iostream>
 #include "tbb/tbb.h"
+#include <vector>
 
-//using namespace tbb;
+using namespace tbb;
 
 //void ParallelApplyFoo( float a[], int n ) {
 //    tbb::parallel_for( 0, n, 1, [&]( int i ) {(a[i]=sqrt(sqrt(i)*sqrt(i)*sqrt(i) / sin(sqrt(i)*sqrt(i)*sqrt(i))) );}  );
@@ -30,7 +31,7 @@
 
 //    std::cout<<"That's "<<((float)duration2/(float)duration1)<<" times faster"<<std::endl;
 
-//    delete atoFill;
+//    delete []atoFill;
 
 //    return 0;
 //}
@@ -39,18 +40,11 @@
 
 
 
-
-#include <vector>
-
-#include "tbb/tbb.h"
-
-using namespace std;
-
 tbb::concurrent_vector<int> my_list;
 
 void add_element(int i) {
 
-    my_list.push_back(i);
+    my_list.push_back(i*sqrt(sqrt(i)*sqrt(i)*sqrt(i) / sin(sqrt(i)*sqrt(i)*sqrt(i))) *i*sqrt(sqrt(i)*sqrt(i)*sqrt(i) / sin(sqrt(i)*sqrt(i)*sqrt(i))));
 
 }
 
@@ -58,7 +52,7 @@ std::vector<int> my_listTradionalVector;
 
 void add_elementTraditionalVector(int i) {
 
-    my_listTradionalVector.push_back(i);
+    my_listTradionalVector.push_back(i*sqrt(sqrt(i)*sqrt(i)*sqrt(i) / sin(sqrt(i)*sqrt(i)*sqrt(i))) *i*sqrt(sqrt(i)*sqrt(i)*sqrt(i) / sin(sqrt(i)*sqrt(i)*sqrt(i))));
 
 }
 
